@@ -186,7 +186,7 @@ $(window).on('load', function(){
         });
     }
     //Init Load Color Theme
-    if ($(window)[0].location.href.includes('https://lcyad.github.io/')){
+    if ($(window)[0].location.href.includes('index.html')){
         loadIndexColorTheme(indexColorTheme[1]);
     }
     
@@ -205,7 +205,7 @@ $(window).on('load', function(){
         Initialize website's font
     */
     function initFont(){
-        if ($(window)[0].location.href.includes('https://lcyad.github.io/')){
+        if ($(window)[0].location.href.includes('index.html')){
             if ($(window).width() > 768) {
                 currentFont = fontList.index_lg;
             } else{
@@ -298,7 +298,8 @@ $(window).on('load', function(){
         //set color theme
         loadColorTheme(colorTheme[e.currentTarget.innerHTML]);
         //set index color theme if it is index.html
-        if ($(window)[0].location.href.includes('https://lcyad.github.io/')){
+        if ($(window)[0].location.href.includes('index.html') 
+            && !(window)[0].location.href.includes('photoalbum.html')){
             loadIndexColorTheme(indexColorTheme[e.currentTarget.innerHTML]);
         }
     });
@@ -339,7 +340,7 @@ $(window).on('load', function(){
     */
     $('#mainNav').on('mouseleave', function(){
         setTimeout(function(){
-            if (($('#top_text')[0].innerHTML != preset_top_text) && !($(window)[0].location.href.includes('https://lcyad.github.io/'))){
+            if (($('#top_text')[0].innerHTML != preset_top_text) && !($(window)[0].location.href.includes('index.html'))){
                 animateText($('#top_text')[0], preset_top_text);
             }
         }, 500);
@@ -351,7 +352,7 @@ $(window).on('load', function(){
         /*Hide the menu bar to prevent showing up when screen is > 768*/
         if ($(window).width() > 768) {
             $('#linkbar_collapse').hide();
-            if (($(window)[0].location.href.includes('https://lcyad.github.io/')) && (currentFont != fontList.index_lg)){
+            if (($(window)[0].location.href.includes('index.html')) && (currentFont != fontList.index_lg)){
                 currentFont = fontList.index_lg;
                 resizeFont();
             }
@@ -362,7 +363,7 @@ $(window).on('load', function(){
         }
         
         if ($(window).width() < 768) {
-            if (($(window)[0].location.href.includes('https://lcyad.github.io/')) && (currentFont != fontList.index_sm)){
+            if (($(window)[0].location.href.includes('index.html')) && (currentFont != fontList.index_sm)){
                 currentFont = fontList.index_sm;
                 resizeFont();
             }
