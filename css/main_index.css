@@ -1,0 +1,105 @@
+/* Main-body CSS */
+#main_body{
+    width: 100%;
+    height: auto;
+    margin: 90px 0px 0px 0px;
+    padding: 0px;
+    max-width: 100%;
+    font-size: 20px;
+}
+
+#main_body .main_body_box{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#main_body .overlay-content-title{
+    font-weight: 700;
+}
+
+
+#main_body .btn.btn-primary.btn-xl.overlay-content-btn{
+    font-size: 30px;
+    color: grey;
+    border-radius: 50px;
+    border: none;
+    width: 200px;
+    margin-top: 20px;
+    background-color: white;
+    outline: none;
+}
+
+#about_box{
+    padding: 0px;
+}
+
+#photo_box{
+    padding: 0px;
+}
+
+#portfolio_box{
+    padding: 0px;
+}
+
+#contact_box{
+    padding: 0px;
+}
+
+#main_body .main_body_box .overlay{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all .35s;
+    opacity: 0;
+}
+
+#main_body .main_body_box .overlay:hover{
+    opacity: 1;
+}
+
+#main_body .main_body_box .overlay .overlay-content{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+#main_body .main_body_box .overlay .overlay-content hr{
+    width: 20%;
+    border-width: 4px;
+    border-color: white;
+    border-radius: 4px;
+}
+/* End Main-body CSS */
+
+/* Optimizaing for less than 768 px screen */
+@media screen and (max-width: 768px){
+
+    /* Main Body CSS*/
+    #main_body{
+        margin: 60px 0px 0px 0px;
+    }
+    
+    /* Might need to set inside JS (Begins)*/
+    #main_body .overlay-content-title{
+        font-size: 20px;
+    }
+
+    #main_body .overlay-content-desc{
+        font-size: 10px;
+    }
+/* Might need to set inside JS (Ends)*/
+
+    /*End Main Body CSS */
+
+}
+
+/* Optimizaing for less than 450 px screen */
+@media screen and (max-width: 450px){
+    
+}
