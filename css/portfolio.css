@@ -1,0 +1,47 @@
+#portfolio-top{
+    margin: 90px 0px 0px 0px;
+}
+
+.portfolio-holder{
+    padding: 20px 0px;
+    background: rgba(223, 167, 124, 0.541)
+}
+
+.portfolio-holder-box{
+    border: 3px solid grey;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.portfolio-holder-box img{
+    margin: 50px 0px;
+    max-width: 100%;
+}
+
+.portfolio-holder-box hr{
+    width: 250px;
+    border: 2px solid grey;
+    align-self: left;
+}
+
+.port-title{
+    margin: 30px 0px 0px 0px;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 768px){
+    .portfolio-holder-box img{
+        margin: 20px 0px;
+        max-height: 200px;
+    }
+
+    .portfolio-holder-box hr{
+        width: 150px;
+    }
+
+    #portfolio-top{
+        margin: 60px 0px 0px 0px;
+    }
+
+}

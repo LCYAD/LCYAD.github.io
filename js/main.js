@@ -42,16 +42,20 @@ $(window).on('load', function(){
             'overlay-content-title': 25
         },
         'port_lg': {
-
+            'port-title': 30,
+            'port-desc': 15
         },
         'port_sm': {
-
+            'port-title': 20,
+            'port-desc': 12
         },
         'contact_lg': {
-
+            'contact-title': 30,
+            'contact-desc': 15
         },
         'contact_sm': {
-
+            'contact-title': 20,
+            'contact-desc': 12
         }
     }
     /*
@@ -233,6 +237,20 @@ $(window).on('load', function(){
                 currentFont = fontList.photo_sm;
             }
         }
+        if ($(window)[0].location.href.includes('portfolio.html')){
+            if ($(window).width() > 768) {
+                currentFont = fontList.port_lg;
+            } else{
+                currentFont = fontList.port_sm;
+            }
+        }
+        if ($(window)[0].location.href.includes('contact.html')){
+            if ($(window).width() > 768) {
+                currentFont = fontList.contact_lg;
+            } else{
+                currentFont = fontList.contact_sm;
+            }
+        }
         
         resizeFont();
     }
@@ -377,7 +395,15 @@ $(window).on('load', function(){
             if (($(window)[0].location.href.includes('photoalbum.html')) && (currentFont != fontList.photo_lg)){
                 currentFont = fontList.photo_lg;
                 resizeFont();
-            }       
+            } 
+            if (($(window)[0].location.href.includes('portfolio.html')) && (currentFont != fontList.port_lg)){
+                currentFont = fontList.port_lg;
+                resizeFont();
+            }
+            if (($(window)[0].location.href.includes('contact.html')) && (currentFont != fontList.contact_lg)){
+                currentFont = fontList.contact_lg;
+                resizeFont();
+            }               
         }
         
         if ($(window).width() < 768) {
@@ -393,6 +419,14 @@ $(window).on('load', function(){
                 currentFont = fontList.photo_sm;
                 resizeFont();
             } 
+            if (($(window)[0].location.href.includes('portfolio.html')) && (currentFont != fontList.port_sm)){
+                currentFont = fontList.port_sm;
+                resizeFont();
+            }
+            if (($(window)[0].location.href.includes('contact.html')) && (currentFont != fontList.contact_sm)){
+                currentFont = fontList.contact_sm;
+                resizeFont();
+            }  
         }
 
     });
