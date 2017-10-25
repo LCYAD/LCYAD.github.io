@@ -1,0 +1,167 @@
+<!--  This is the welcoming page
+      Elements I want to put in:
+      1. A welcoming statement
+      2. Button links to other website
+      3. A footer area to my linkedln, facbook profile. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Know more about me!</title>
+
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+  <!-- JQuery UI CSS -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+
+  <!-- Style Sheet -->
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/aboutme.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Pacifico" rel="stylesheet">
+  <!-- JQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+  <!-- Custom JQuery JS -->
+  <script src="js/main.js"></script>
+
+</head>
+<body>
+  <!-- Nav bar starts here -->
+  <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
+    <div class="container-fluid"  id="top_header">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <div class="col-lg-2 col-md-2 col-sm-3">
+            <a href="index.html"><img src="img/Main/profile.jpg" id="profile_picture"></a>
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-9"><span id="top_text">At: About Me</span></div>
+        </div>
+        <!-- This is the top bar links (except for main page) that will collapse if width is less than 768 -->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+          <div class="btn-group btn-group-lg" role="group" id="link_button_group">
+              <a href="#" class="btn btn-secondary link_icon_btn">
+                  <i class="fa fa-user-o" aria-hidden="true" id="about_icon"></i>
+              </a>
+              <a href="photoalbum.html" class="btn btn-secondary link_icon_btn">
+                <i class="fa fa-picture-o" aria-hidden="true" id="photo_icon"></i>
+              </a>
+              <a href="portfolio.html" class="btn btn-secondary link_icon_btn" >
+                <i class="fa fa-file-o" aria-hidden="true" id="portfolio_icon"></i>
+              </a>
+              <a href="contact.html" class="btn btn-secondary link_icon_btn" >
+                <i class="fa fa-envelope-o" aria-hidden="true" id="contact_icon"></i>
+              </a>
+          </div>
+          <button class="btn btn-secondary setting_icon_btn">
+            <i class="fa fa-cog" aria-hidden="true" id="setting_icon"></i>
+          </button>
+          <button class="btn btn-secondary" id="menu_btn">
+            <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+          </button>
+        </div>
+    </div> <!-- End container fluid (Main navbar uncollapsed area) -->
+
+    <!-- Collapsable link button bar goes here -->
+    <div class="container-fluid" id="linkbar_collapse">
+      <div class="row">
+        <div class="col-xs-5 col-xs-offset-1 linkbar_col">
+          <a href="#" class="btn btn-secondary linkbar_col_btn">
+            <span>About</span>
+          </a>
+        </div>
+        <div class="col-xs-5 linkbar_col">
+          <a href="photoalbum.html" class="btn btn-secondary linkbar_col_btn">
+            <span>Photo</span>
+          </a>
+        </div>
+        <div class="col-xs-5 col-xs-offset-1 linkbar_col">
+          <a href="portfolio.html" class="btn btn-secondary linkbar_col_btn">
+            <span>Portfolio</span>
+          </a>
+        </div>
+        <div class="col-xs-5 linkbar_col">
+          <a href="contact.html" class="btn btn-secondary linkbar_col_btn">
+              <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collapsable setting  goes here -->
+    <div class="container-fluid" id="settings">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="setting_bar">
+          <div class="setting_bar_inner">
+            <span>Size : </span><span id="size_field">100</span><span>%</span>
+          </div>
+          <div id="slider"></div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="setting_bar">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-5"><div class="color_inner">Theme</div></div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-7">
+            <div class="color_choice 1">1</div>
+            <div class="color_choice 2">2</div>
+            <div class="color_choice 3">3</div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End setting section -->
+  </nav><!-- End navbar default -->
+
+
+  <!-- main body of the page -->
+  <section> <!-- My info Section -->
+      <div class="container-fluid" style="width: 100%; height: 400px; background-color: blue; margin-top: 90px">
+      </div>
+  </section> <!-- End My info Section -->
+
+  <section> <!-- My info Section -->
+    <div class="container-fluid" style="width: 100%; height: 400px; background-color: red;">
+    </div>
+  </section> <!-- End My info Section -->
+
+  <section> <!-- My info Section -->
+    <div class="container-fluid" style="width: 100%; height: 400px; background-color: blue;">
+    </div>
+  </section> <!-- End My info Section -->
+
+  <section> <!-- My info Section -->
+    <div class="container-fluid" style="width: 100%; height: 400px; background-color: red;">
+    </div>
+  </section> <!-- End My info Section -->
+
+  <!-- footer -->
+  <footer>
+    <div class="container-fluid" id="footer_area">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
+          <a href="https://www.facebook.com/adrian.lee.549" class="button link_box" target="_blank">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/LCYAD" class="button link_box" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/adrian-lee-244248147/" class="button link_box" target="_blank">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </div>             
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
