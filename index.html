@@ -1,0 +1,75 @@
+<!--  This is the welcoming page
+      Elements I want to put in:
+      1. A welcoming statement
+      2. Button links to other website
+      3. A footer area to my linkedln, facbook profile. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Come on In!</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="welcome_screen">
+      <!--Top thought bubble-->
+      <p class="thought" id="message">
+        <img src="img/Main/profile.jpg">
+        Hi I am Adrian! Welcome to my own page! Come on in and take a look around!
+      </p>
+
+      <!--Menu bar -->
+      <div class="menu" id="this_menu">
+          <p class="menu_header" id="about_me_icon">About Me</p>
+            <div class="desc_text" id= "about_me_desc">
+              ------------------------------------------
+              <p>Content include: &nbsp; Introduction, Hobbies, Dream etc...</p>
+              <a href="aboutme.html">Go to About Me Page</a>
+            </div>
+          <p class="menu_header" id="about_me_icon">My Photo</p>
+            <div class="desc_text" id= "about_me_desc">
+              ------------------------------------------
+              <p>Content include: &nbsp; Some photos of my previous trip and interesting photos.....Beware though!</p>
+              <a href="photoalbum.html">Go to My Photo Page</a>
+            </div>
+      </div>
+    </div>
+
+    <!-- Footer: Include Linkedln and Facebook profile -->
+    <footer>
+      <ul>
+        <li><a href="https://www.facebook.com/adrian.lee.549" class="social facebook"></a></li>
+        <li><a href="https://www.linkedin.com/in/adrian-lee-244248147/" class="social linkedin"></a></li>
+        <li><a href="https://github.com/LCYAD" class="social github"></a></li>
+      </ul>
+      <p class="copyright">Copyright 2017, Adrian Lee</p>
+    </footer>
+
+
+  </body>
+</html>
