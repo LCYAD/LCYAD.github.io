@@ -15,17 +15,19 @@ $(window).on('load', function(){
     var fontList = {
         'index_lg': {
             'overlay-content-title': 30,
-            'overlay-content-desc': 15
+            'overlay-content-desc': 12
         },
         'index_sm': {
             'overlay-content-title': 15,
             'overlay-content-desc': 8
         },
         'about_lg': {
-
+            'about_header': 30,
+            'about_desc': 15
         },
         'about_sm': {
-
+            'about_header': 20,
+            'about_desc': 10
         },
         'photo_lg': {
             'gallery-title': 35,
@@ -91,6 +93,7 @@ $(window).on('load', function(){
             'footer_area':{
                 'backgroundColor': 'rgb(233, 221, 221)', //include collapse link bar
             },
+            'link_box_border': 'rgba(0, 0, 0, 0.8)',
             'link_box_i': 'rgba(0, 0, 0, 0.8)'
                      
         },
@@ -112,6 +115,7 @@ $(window).on('load', function(){
             'footer_area':{
                 'backgroundColor': 'url("img/Theme/2/nav_footer.jpg") left bottom fixed', //include collapse link bar
             },
+            'link_box_border': 'white',    
             'link_box_i': 'white'     
         },
         3: {
@@ -132,7 +136,9 @@ $(window).on('load', function(){
             'footer_area':{
                 'backgroundColor': 'url("img/Theme/3/nav_footer.jpg") left bottom fixed', //include collapse link bar
             },
-            'link_box_i': 'black'     
+            'link_box_border': 'black',
+            'link_box_i': 'black'
+                 
         }
     }
 
@@ -159,6 +165,7 @@ $(window).on('load', function(){
         //load the footer
         $('#footer_area').css({'background': `${options.footer_area.backgroundColor}`});
         $('.link_box i').css({color: `${options.link_box_i}`});
+        $('.link_box').css({borderColor: `${options.link_box_border}`});
         
         //highlight the theme button
         $(`.color_choice.${options.num}`).css({'background': `${options.theme_btn}`})
@@ -212,6 +219,13 @@ $(window).on('load', function(){
                 currentFont = fontList.index_sm;
             }
         }
+        if ($(window)[0].location.href.includes('aboutme.html')){
+            if ($(window).width() > 768) {
+                currentFont = fontList.about_lg;
+            } else{
+                currentFont = fontList.about_sm;
+            }
+        }
         if ($(window)[0].location.href.includes('photoalbum.html')){
             if ($(window).width() > 768) {
                 currentFont = fontList.photo_lg;
@@ -219,6 +233,7 @@ $(window).on('load', function(){
                 currentFont = fontList.photo_sm;
             }
         }
+        
         resizeFont();
     }
     initFont();
@@ -298,8 +313,7 @@ $(window).on('load', function(){
         //set color theme
         loadColorTheme(colorTheme[e.currentTarget.innerHTML]);
         //set index color theme if it is index.html
-        if ($(window)[0].location.href.includes('index.html') 
-            && !(window)[0].location.href.includes('photoalbum.html')){
+        if ($(window)[0].location.href.includes('index.html')){
             loadIndexColorTheme(indexColorTheme[e.currentTarget.innerHTML]);
         }
     });
@@ -356,6 +370,10 @@ $(window).on('load', function(){
                 currentFont = fontList.index_lg;
                 resizeFont();
             }
+            if (($(window)[0].location.href.includes('aboutme.html')) && (currentFont != fontList.about_lg)){
+                currentFont = fontList.about_lg;
+                resizeFont();
+            }    
             if (($(window)[0].location.href.includes('photoalbum.html')) && (currentFont != fontList.photo_lg)){
                 currentFont = fontList.photo_lg;
                 resizeFont();
@@ -365,6 +383,10 @@ $(window).on('load', function(){
         if ($(window).width() < 768) {
             if (($(window)[0].location.href.includes('index.html')) && (currentFont != fontList.index_sm)){
                 currentFont = fontList.index_sm;
+                resizeFont();
+            }
+            if (($(window)[0].location.href.includes('aboutme.html')) && (currentFont != fontList.about_sm)){
+                currentFont = fontList.about_sm;
                 resizeFont();
             }
             if (($(window)[0].location.href.includes('photoalbum.html')) && (currentFont != fontList.photo_sm)){
