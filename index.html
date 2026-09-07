@@ -1,167 +1,122 @@
-<!--  This is the welcoming page
-      Elements I want to put in:
-      1. A welcoming statement
-      2. Button links to other website
-      3. A footer area to my linkedln, facbook profile. -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>This is where it begins!</title>
-
-  <!-- Bootstrap CSS-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-
-  <!-- JQuery UI CSS -->
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
-
-  <!-- Style Sheet -->
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/main_index.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Pacifico" rel="stylesheet">
-
-  <!-- JQuery and Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-
-  <!-- Custom JQuery JS -->
-  <script src="js/main.js"></script>
-
+  <meta name="description" content="Adrian C.Y. Lee - IT manager and software engineer.">
+  <title>Adrian C.Y. Lee | IT Manager &amp; Software Engineer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <!-- Nav bar starts here -->
-  <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
-    <div class="container-fluid"  id="top_header">
-        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-          <div class="col-lg-1 col-md-2 col-sm-2">
-            <a href="#top"><img src="img/Main/profile.jpg" id="profile_picture"></a>
-          </div>
-          <div class="col-lg-11 col-md-10 col-sm-10"><span id="top_text">Hi! I am Adrian! Welcome!</span></div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-          <button class="setting_icon_btn"><i class="fa fa-cog" aria-hidden="true" id="setting_icon"></i></button>
-        </div>
-    </div> <!-- End container fluid (Main navbar uncollapsed area) -->
-
-    <!-- Collapsable setting and other options goes here -->
-    <div class="container-fluid" id="settings">
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <div class="setting_bar">
-          <div class="setting_bar_inner">
-            <span>Size : </span><span id="size_field">100</span><span>%</span>
-          </div>
-          <div id="slider"></div>
-        </div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Profile and site navigation">
+      <img class="sidebar-photo" src="https://res.cloudinary.com/drqqvhupz/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1788775249/cfd7eikgilfqe96ebbq3.jpg" alt="Adrian C.Y. Lee">
+      <div class="sidebar-info">
+        <p class="sidebar-name">Adrian C.Y. Lee</p>
+        <p class="sidebar-role">IT Manager &amp; Software Engineer</p>
+        <p class="sidebar-location">Hong Kong</p>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <div class="setting_bar">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-5"><div class="color_inner">Theme</div></div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-7">
-            <div class="color_choice 1">1</div>
-            <div class="color_choice 2">2</div>
-            <div class="color_choice 3">3</div>
-          </div>
+      <p class="sidebar-status">Available for opportunities</p>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <span class="theme-toggle-label" aria-hidden="true">Theme</span><span class="toggle-track" aria-hidden="true"></span>
+      </button>
+      <nav class="sidebar-nav" aria-label="On this page">
+        <a class="sidebar-tab active" href="#home">Home</a>
+        <a class="sidebar-tab" href="#experience">Experience</a>
+        <a class="sidebar-tab" href="#skills">Skills</a>
+        <a class="sidebar-tab" href="#credentials">Credentials</a>
+        <a class="sidebar-tab" href="#projects">Projects</a>
+        <a class="sidebar-tab" href="#contact">Contact</a>
+      </nav>
+      <div class="sidebar-social" aria-label="Contact links">
+        <a href="mailto:alee.lcagency@gmail.com" aria-label="Email Adrian" title="Email Adrian"><i data-lucide="mail" aria-hidden="true"></i></a>
+        <a href="https://github.com/LCYAD" target="_blank" rel="noreferrer" aria-label="Adrian on GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/adrian-lee-244248147/" target="_blank" rel="noreferrer" aria-label="Adrian on LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+      </div>
+    </aside>
+
+    <main class="main"><div class="main-inner">
+      <section class="hero" id="home">
+        <p class="eyebrow">Hello, I am Adrian.</p>
+        <h1>IT manager and software engineer building dependable digital products.</h1>
+        <p class="hero-summary">I lead engineering teams and build web applications from technical design through delivery. My work spans scalable backend services, cloud infrastructure, data reporting, and modern frontend applications.</p>
+        <div class="hero-actions"><a class="button button-primary" href="mailto:alee.lcagency@gmail.com">Get in touch</a><a class="button button-secondary" href="#experience">View experience</a></div>
+        <dl class="hero-stats">
+          <div><dt>6+</dt><dd>Years in software</dd></div>
+          <div><dt>3</dt><dd>Engineering teams led</dd></div>
+          <div><dt>4</dt><dd>Languages spoken</dd></div>
+        </dl>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <p class="section-intro">Product, platform, and engineering leadership across technology and financial services.</p>
+        <div class="timeline">
+          <article class="timeline-item">
+            <header class="timeline-header"><div class="company-group"><span class="company-mark">H</span><h3>HashKey Digital Asset Group</h3></div><p>Jun 2022 - Aug 2023</p></header>
+            <p class="timeline-role">Senior IT Manager</p><p class="timeline-location">Hong Kong - Full-time</p>
+            <ul><li>Established and managed an offshore engineering team in Vietnam for mid- and back-office products.</li><li>Led technical direction, cloud infrastructure discussions, code review, recruitment, budgeting, and delivery operations.</li><li>Built exchange and regulatory reports from the data warehouse, including VATP reporting and a general-ledger reconciliation workflow.</li></ul>
+          </article>
+          <article class="timeline-item">
+            <header class="timeline-header"><div class="company-group"><span class="company-mark">L</span><h3>Lalamove</h3></div><p>Jul 2021 - May 2022</p></header>
+            <p class="timeline-role">Senior Software Engineer, Backend</p><p class="timeline-location">Hong Kong - Full-time</p>
+            <ul><li>Led six engineers developing LLM+, a B2B product for recurring and scheduled corporate deliveries.</li><li>Ran Scrum ceremonies and translated product requirements into reviewed technical specifications for biweekly releases.</li><li>Prototyped state-machine and event-sourcing approaches to improve delivery-status control and traceability.</li></ul>
+          </article>
+          <article class="timeline-item">
+            <header class="timeline-header"><div class="company-group"><span class="company-mark">01</span><h3>HK01</h3></div><p>Jan 2019 - Jul 2021</p></header>
+            <p class="timeline-role">Software Engineer / Senior Software Engineer</p><p class="timeline-location">Hong Kong - Full-time</p>
+            <ul><li>Led the charity product team and audience-solution work for re-engagement campaigns across app push, SMS, and GAM.</li><li>Developed the backend of HK01's charity platform, enabling NGOs to promote their work and receive donations.</li></ul>
+          </article>
+          <article class="timeline-item">
+            <header class="timeline-header"><div class="company-group"><span class="company-mark">A</span><h3>AfterShip</h3></div><p>Apr 2018 - Dec 2018</p></header>
+            <p class="timeline-role">Software Engineer</p><p class="timeline-location">Hong Kong - Full-time</p>
+            <ul><li>Maintained courier tracking systems and integrated new couriers from implementation through deployment.</li><li>Built and maintained e-commerce platform plugins for Shopify, Magento, and WooCommerce.</li></ul>
+          </article>
         </div>
-      </div>
-    </div> <!-- End setting section -->
-  </nav><!-- End navbar default -->
+      </section>
 
+      <section id="skills">
+        <h2>Skills</h2><p class="section-intro">The technologies and disciplines I have used to deliver and operate web products.</p>
+        <div class="skills-grid">
+          <div class="skill-category"><h3>Leadership &amp; Delivery</h3><p>Engineering management, technical planning, Scrum, code review, cloud architecture, stakeholder communication</p></div>
+          <div class="skill-category"><h3>Backend &amp; Data</h3><p>JavaScript, TypeScript, Python, Go, Java, Koa, NestJS, Spring Boot, MySQL, MongoDB, Redis, RabbitMQ</p></div>
+          <div class="skill-category"><h3>Frontend</h3><p>React, TypeScript, Next.js, Vue.js, Ionic React, Redux Saga</p></div>
+          <div class="skill-category"><h3>Cloud &amp; Operations</h3><p>AWS, EKS, API Gateway, RDS, Jenkins, ArgoCD, Grafana, Prometheus, Loki, Docker, Kubernetes</p></div>
+        </div>
+      </section>
 
-  <!-- Main Body of the page -->
-  <section>
-      <div class="container-fluid" id="main_body">
-          <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="about_box">
-                  <div class="main_body_box">
-                    <img src="img/Main/about.jpg" class="img-responsive"> <!-- About Me -->
-                      <div class="overlay">
-                          <div class="overlay-content">
-                              <div class="overlay-content-title text-faded">About Me</div>
-                              <hr>
-                              <div class="overlay-content-desc">
-                                Introduction, Hobbies, Dream etc...
-                              </div>
-                              <a href="aboutme.html" class="btn btn-primary btn-xl overlay-content-btn">Go!</a>
-                          </div>
-                      </div>
-                  </div> 
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="photo_box">
-                  <div class="main_body_box">
-                      <img src="img/Main/photo_album.jpg" class="img-responsive"> <!-- Photo -->
-                        <div class="overlay">
-                          <div class="overlay-content">
-                              <div class="overlay-content-title text-faded">My Photo</div>
-                              <hr>
-                              <div class="overlay-content-desc">
-                                Some photos of my previous trip and interesting photos
-                              </div>
-                              <a href="photoalbum.html" class="btn btn-primary btn-xl overlay-content-btn">Go!</a>
-                          </div>
-                      </div>
-                  </div> 
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="portfolio_box">
-                  <div class="main_body_box">
-                      <img src="img/Main/portfolio.jpg" class="img-responsive"> <!-- Portfolio -->
-                        <div class="overlay">
-                          <div class="overlay-content">
-                              <div class="overlay-content-title text-faded">Portfolio</div>
-                              <hr>
-                              <div class="overlay-content-desc">
-                                Simple showcase of my current and previous works
-                              </div>
-                              <a href="portfolio.html" class="btn btn-primary btn-xl overlay-content-btn">Go!</a>
-                          </div>
-                      </div>
-                  </div> 
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="contact_box">
-                  <div class="main_body_box">
-                      <img src="img/Main/contact.jpg" class="img-responsive"> <!-- Contact -->
-                        <div class="overlay">
-                          <div class="overlay-content">
-                              <div class="overlay-content-title text-faded">Contact</div>
-                              <hr>
-                              <div class="overlay-content-desc">A list of ways you can locate me</div>
-                              <a href="contact.html" class="btn btn-primary btn-xl overlay-content-btn">Go!</a>
-                          </div>
-                      </div>
-                  </div> 
-              </div>
-          </div> <!--End Row -->
-      </div>
-  </section> <!-- End Main Body -->
+      <section id="credentials">
+        <h2>Education &amp; Credentials</h2><p class="section-intro">Professional study and qualifications.</p>
+        <div class="credentials-list">
+          <article class="credential"><div><h3>BSc Banking and Finance</h3><p>University of London International Programme - First Class Honours</p></div><time>2014 - 2020</time></article>
+          <article class="credential"><div><h3>Immersive Coding Bootcamp</h3><p>Accelerate HK - Full-stack web development</p></div><time>2017</time></article>
+          <article class="credential"><div><h3>CFA Program</h3><p>Passed Level III, Level II, and Level I examinations</p></div><time>2016 - 2018</time></article>
+          <article class="credential"><div><h3>Japanese Language Proficiency Test</h3><p>JLPT N2</p></div><time>2023</time></article>
+        </div>
+      </section>
 
-  <!-- footer -->
-  <footer>
-    <div class="container-fluid" id="footer_area">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
-          <a href="https://www.facebook.com/adrian.lee.549" class="button link_box" target="_blank">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/LCYAD" class="button link_box" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/adrian-lee-244248147/" class="button link_box" target="_blank">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-        </div>             
-      </div>
-    </div>
-  </footer>
+      <section id="projects">
+        <h2>Selected Work</h2><p class="section-intro">Independent work and technical initiatives described in my CV.</p>
+        <div class="projects-grid">
+          <article class="project-card"><h3>The Fruit Supplier</h3><p class="project-role">Software Engineer - 2021 - 2022</p><p>Designed and built a CMS MVP for a fruit supplier from the ground up, covering technical direction, hands-on development, cloud infrastructure, and delivery support.</p><ul class="project-tags"><li>Product delivery</li><li>Cloud infrastructure</li><li>CMS</li></ul></article>
+          <article class="project-card"><h3>Delivery State-Machine POC</h3><p class="project-role">Technical Lead - 2021 - 2022</p><p>Proposed and prototyped state-machine and event-sourcing patterns to make delivery status observable and traceable for a B2B logistics platform.</p><ul class="project-tags"><li>Event sourcing</li><li>System design</li><li>Logistics</li></ul></article>
+          <article class="project-card"><h3>Python Fundamentals</h3><p class="project-role">Instructor - 2018 - 2022</p><p>Taught a recurring three-week Python fundamentals course, refining course material, assignments, and solutions around student progress and feedback.</p><ul class="project-tags"><li>Python</li><li>Teaching</li><li>Curriculum design</li></ul></article>
+        </div>
+      </section>
 
+      <section id="contact">
+        <h2>Contact</h2><p class="contact-intro">For engineering leadership, software delivery, or collaboration enquiries, please get in touch.</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:alee.lcagency@gmail.com"><h3>Email</h3><p>alee.lcagency@gmail.com</p></a>
+          <a class="contact-card" href="https://www.linkedin.com/in/adrian-lee-244248147/" target="_blank" rel="noreferrer"><h3>LinkedIn</h3><p>/in/adrian-lee-244248147</p></a>
+          <a class="contact-card" href="https://github.com/LCYAD" target="_blank" rel="noreferrer"><h3>GitHub</h3><p>@LCYAD</p></a>
+        </div>
+      </section>
+      <footer class="footer"><p>&copy; 2026 Adrian C.Y. Lee. All rights reserved.</p></footer>
+    </div></main>
+  </div>
+  <script src="https://unpkg.com/lucide@1.41.0/dist/umd/lucide.min.js"></script>
+  <script src="js/site.js"></script>
 </body>
-
 </html>
