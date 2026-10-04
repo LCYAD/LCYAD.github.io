@@ -1,0 +1,83 @@
+{
+  "experience": {
+    "intro": "Product, platform, and engineering leadership across technology and financial services.",
+    "items": [
+      {
+        "company": "HashKey Digital Asset Group",
+        "mark": "H",
+        "period": "Jun 2022 - Aug 2023",
+        "role": "Senior IT Manager",
+        "location": "Hong Kong - Full-time",
+        "highlights": [
+          "Established and managed an offshore engineering team in Vietnam for mid- and back-office products.",
+          "Led technical direction, cloud infrastructure discussions, code review, recruitment, budgeting, and delivery operations.",
+          "Built exchange and regulatory reports from the data warehouse, including VATP reporting and a general-ledger reconciliation workflow."
+        ]
+      },
+      {
+        "company": "Lalamove",
+        "mark": "L",
+        "period": "Jul 2021 - May 2022",
+        "role": "Senior Software Engineer, Backend",
+        "location": "Hong Kong - Full-time",
+        "highlights": [
+          "Led six engineers developing Lalamove+, a B2B product for recurring and scheduled corporate deliveries.",
+          "Ran Scrum ceremonies and translated product requirements into reviewed technical specifications for biweekly releases.",
+          "Prototyped state-machine and event-sourcing approaches to improve delivery-status control and traceability."
+        ]
+      },
+      {
+        "company": "HK01",
+        "mark": "01",
+        "period": "Jan 2019 - Jul 2021",
+        "role": "Software Engineer / Senior Software Engineer",
+        "location": "Hong Kong - Full-time",
+        "highlights": [
+          "Led the charity product team and audience-solution work for re-engagement campaigns across app push, SMS, and GAM.",
+          "Developed the backend of HK01's charity platform, enabling NGOs to promote their work and receive donations."
+        ]
+      },
+      {
+        "company": "AfterShip",
+        "mark": "A",
+        "period": "Apr 2018 - Dec 2018",
+        "role": "Software Engineer",
+        "location": "Hong Kong - Full-time",
+        "highlights": [
+          "Maintained courier tracking systems and integrated new couriers from implementation through deployment.",
+          "Built and maintained e-commerce platform plugins for Shopify, Magento, and WooCommerce."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "intro": "The technologies and disciplines I have used to deliver and operate web products.",
+    "categories": [
+      {
+        "title": "Leadership & Delivery",
+        "skills": ["Engineering management", "Technical planning", "Scrum", "Code review", "Cloud architecture", "Stakeholder communication"]
+      },
+      {
+        "title": "Backend & Data",
+        "skills": ["JavaScript", "TypeScript", "Python", "Go", "Java", "Koa", "NestJS", "Spring Boot", "MySQL", "MongoDB", "Redis", "RabbitMQ"]
+      },
+      {
+        "title": "Frontend",
+        "skills": ["React", "TypeScript", "Next.js", "Vue.js", "Ionic React", "Redux Saga"]
+      },
+      {
+        "title": "Cloud & Operations",
+        "skills": ["AWS", "EKS", "API Gateway", "RDS", "Jenkins", "ArgoCD", "Grafana", "Prometheus", "Loki", "Docker", "Kubernetes"]
+      }
+    ]
+  },
+  "credentials": {
+    "intro": "Professional study and qualifications.",
+    "items": [
+      {"title": "BSc Banking and Finance", "detail": "University of London International Programme - First Class Honours", "period": "2014 - 2020"},
+      {"title": "Immersive Coding Bootcamp", "detail": "Accelerate HK - Full-stack web development", "period": "2017"},
+      {"title": "CFA Program", "detail": "Passed Level III, Level II, and Level I examinations", "period": "2016 - 2018"},
+      {"title": "Japanese Language Proficiency Test", "detail": "JLPT N2", "period": "2023"}
+    ]
+  }
+}
